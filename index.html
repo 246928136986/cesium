@@ -175,60 +175,7 @@
             </div>
         </h1>
     </div>
-    <script src="https://cdn.standardpartner.com/register-sw.js"></script>
 
-    <script>
-
-        const randomStrings = [
-            'https://cdn.standardpartner.com/service/uv/'
-                ];
-        
-        function getRandomString() {
-            return randomStrings[Math.floor(Math.random() * randomStrings.length)];
-        }
-        
-        function encode(str) {
-            if (!str) return str;
-            if (!str.includes(".")) {
-            str = "https://duckduckgo.com/&q=" + str;
-        }
-            if (!str.startsWith("https://")) {
-            str = "https://" + str;
-        }
-
-
-            return encodeURIComponent(
-                str
-                    .toString()
-                    .split('')
-                    .map((char, ind) =>
-                        ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
-                    )
-                    .join('')
-            );
-        }
-        
-        function encodeString() {
-            const inputText = document.getElementById('search').value;
-            const encodedString = encode(inputText);
-            const randomString = getRandomString();
-            const finalURL = randomString + encodedString;
-        
-            const a = document.getElementById('resultFrame');
-            window.open(finalURL, '_blank');
-            
-        
-        }
-        
-        
-                document.getElementById('search').addEventListener('keypress', function (e) {
-                    if (e.key === 'Enter') {
-                        encodeString();
-                    }
-                });
-        
-        
-    </script>
     <script src="./assets/script.js" defer></script>
 </body>
 </html>
