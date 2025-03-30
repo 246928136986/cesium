@@ -2,7 +2,7 @@ self.__uv$config = {
     prefix: '/service/',
 
     /* Bare server URL */ 
-    bare: 'https://images.maigec.cl/bare/',
+    bare: 'https://nauka.politechnika-nova.edu.pl/',
     
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
